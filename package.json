@@ -6,9 +6,11 @@
   "scripts": {
     "runTestHeaded": "npx playwright test tests/e2e-web/*  --headed",
     "runTestInRuner": "npx playwright test tests/e2e-web/web.login.test  --headed --ui",
-    "runLoginTestInChrome" : "npx playwright test tests/e2e-web/web.login.test  --headed --ui --project chrome" 
+    "runLoginTestInChrome" : "npx playwright test tests/e2e-web/web.login.test  --headed --ui --project chrome",
+    "rubFilterTestsInChome": "npx playwright test tests/e2e-web/FilterFunctionality.test  --headed --ui --project chrome"
 
   },
+  
   "keywords": [
     "playwright",
     "e2e"
