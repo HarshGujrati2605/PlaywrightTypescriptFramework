@@ -1,13 +1,13 @@
 import { test as baseTest } from '@playwright/test';
 import { LoginPage } from '../pageFactory/LoginPage';
 import { WebActions } from './WebActions'; 
-import { HomePage } from '@pages/HomePage';
+import { FilterPage } from '@pages/FilterPage';
 
 
 const test = baseTest.extend<{
     webActions: WebActions;
     loginPage: LoginPage;
-    homepage: HomePage;
+    filterpage: FilterPage;
 }>({
     webActions: async ({ page, context }, use) => {
         await use(new WebActions(page, context));
@@ -16,8 +16,8 @@ const test = baseTest.extend<{
         await use(new LoginPage(page, context));
     },
 
-    homepage: async({page , context} , use) =>{
-       await use(new HomePage(page , context)) ;
+    filterpage: async({page , context} , use) =>{
+       await use(new FilterPage(page , context)) ;
     }
 
 
